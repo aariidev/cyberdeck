@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CyberDeck")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e3929bbbc74e3151fd1b018bd8cc18ac813e46e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e5ef0a83aa5ca9e0affdf87eb9c4c06e7d53b3da")]
 [assembly: System.Reflection.AssemblyProductAttribute("CyberDeck")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CyberDeck")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
