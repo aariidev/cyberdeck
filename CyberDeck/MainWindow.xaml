@@ -1,0 +1,96 @@
+<Window x:Class="CyberDeck.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CYBERDECK v3.0 - Neural Storage Repair" Height="600" Width="900"
+        Background="{StaticResource BgBrush}" Foreground="{StaticResource TextBrush}"
+        FontFamily="Consolas" WindowStartupLocation="CenterScreen">
+    
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" BorderBrush="{StaticResource MagentaBrush}" BorderThickness="0,0,0,2" Margin="0,0,0,10" Padding="0,0,0,10">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock Text="CYBERDECK" Foreground="{StaticResource CyanLightBrush}" FontSize="32" FontWeight="Bold"/>
+                <TextBlock Text=" // NEURAL STORAGE BREACH &amp; REPAIR" Foreground="{StaticResource MagentaBrush}" FontSize="24" VerticalAlignment="Bottom" Margin="10,0,0,2"/>
+            </StackPanel>
+        </Border>
+
+        <!-- Main Content Grid -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Disks Table -->
+            <GroupBox Header="[ DETECTED NEURAL LINKS ]" Foreground="{StaticResource CyanLightBrush}" BorderBrush="{StaticResource PanelBrush}" Margin="0,0,10,0">
+                <DataGrid x:Name="DisksDataGrid" AutoGenerateColumns="False" 
+                          Background="Transparent" RowBackground="Transparent"
+                          Foreground="{StaticResource TextBrush}"
+                          BorderThickness="0" HeadersVisibility="Column"
+                          GridLinesVisibility="Horizontal" HorizontalGridLinesBrush="{StaticResource PanelBrush}"
+                          IsReadOnly="True" SelectionMode="Single"
+                          SelectionChanged="DisksDataGrid_SelectionChanged">
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="{StaticResource PanelBrush}"/>
+                            <Setter Property="Foreground" Value="{StaticResource CyanLightBrush}"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Padding" Value="5"/>
+                        </Style>
+                        <Style TargetType="DataGridRow">
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{StaticResource PanelBrush}"/>
+                                    <Setter Property="Foreground" Value="{StaticResource CyanLightBrush}"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.Resources>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding NumberStr}" Width="50"/>
+                        <DataGridTextColumn Header="MODEL" Binding="{Binding FriendlyName}" Width="*"/>
+                        <DataGridTextColumn Header="SIZE (GB)" Binding="{Binding Size}" Width="80"/>
+                        <DataGridTextColumn Header="BUS" Binding="{Binding BusType}" Width="70"/>
+                        <DataGridTextColumn Header="STYLE" Binding="{Binding PartitionStyle}" Width="70"/>
+                        <DataGridTextColumn Header="REM?" Binding="{Binding IsRemovableStr}" Width="50"/>
+                        <DataGridTextColumn Header="RO?" Binding="{Binding IsReadOnlyStr}" Width="50"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+
+            <!-- Actions Panel -->
+            <GroupBox Grid.Column="1" Header="[ COMMAND MATRIX ]" Foreground="{StaticResource MagentaBrush}" BorderBrush="{StaticResource PanelBrush}">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <StackPanel Margin="5">
+                        <Button Content="1. SCAN REMOVABLE" Click="BtnScanRemovable_Click"/>
+                        <Button Content="2. FULL SCAN (DANGER)" Click="BtnFullScan_Click"/>
+                        
+                        <Separator Margin="0,15" Background="{StaticResource PanelBrush}"/>
+                        <TextBlock Text="[ BREACH PROTOCOLS ]" Foreground="{StaticResource MagentaBrush}" FontWeight="Bold" Margin="0,0,0,5" HorizontalAlignment="Center"/>
+                        
+                        <Button x:Name="BtnProfile" Content="NEURAL DUMP" IsEnabled="False" Click="BtnProfile_Click"/>
+                        <Button x:Name="BtnClearRO" Content="CLEAR WRITE PROTECT" IsEnabled="False" Click="BtnClearRO_Click"/>
+                        <Button x:Name="BtnFormat" Content="FORMAT PARTITION" IsEnabled="False" Click="BtnFormat_Click"/>
+                        <Button x:Name="BtnWipe" Content="FULL WIPE (DANGER)" Foreground="{StaticResource MagentaBrush}" BorderBrush="{StaticResource MagentaBrush}" IsEnabled="False" Click="BtnWipe_Click"/>
+                        <Button x:Name="BtnShowCmds" Content="SHOW DISKPART CMD" IsEnabled="False" Click="BtnShowCmds_Click"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </GroupBox>
+        </Grid>
+
+        <!-- Status / Logs -->
+        <TextBlock Grid.Row="2" Text="[ SYSTEM LOG ]" Foreground="{StaticResource CyanLightBrush}" Margin="0,10,0,2"/>
+        <Border Grid.Row="3" BorderBrush="{StaticResource PanelBrush}" BorderThickness="1" Background="{StaticResource BgBrush}">
+            <ScrollViewer x:Name="LogScroll">
+                <TextBlock x:Name="LogText" Padding="5" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </Border>
+    </Grid>
+</Window>

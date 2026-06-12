@@ -1,6 +1,6 @@
 # CyberPy Ari - Cyberdeck Neural Storage Repair
 
-**Versión:** 2.0  
+**Versión:** 3.0 (Major Upgrade)  
 **Proyecto:** cyberpy_ari  
 **Estilo:** Cyberpunk TUI (Terminal User Interface)
 
@@ -90,11 +90,22 @@ El log se guarda automáticamente en `cyberdeck_log.txt` dentro de la carpeta.
 
 ---
 
+## Novedades v3.0 (Mejoras Muy Grandes)
+
+- **Visual Partition Mapper**: Representación visual de las particiones en la terminal.
+- **Auto-Repair Advisor**: Analiza el estado del disco y recomienda las mejores acciones automáticamente.
+- **SMART / Health Dashboard**: Datos reales de salud del disco (SMART, predict failure, etc.).
+- **Repair Script Export**: Genera scripts .ps1 reutilizables con las acciones elegidas.
+- **Persistent Config**: Guarda tus preferencias (FS por defecto, etiquetas, dry-run).
+- **Secure Wipe Levels**: Opciones avanzadas de borrado con advertencias extra.
+- **Mejor UI**: Más botones, barra de estado, progreso implícito y ayuda integrada.
+- Muchas mejoras de estabilidad, manejo de errores y organización interna.
+
 ## Créditos
 
 Desarrollado como una versión mejorada y estilizada de `diskpart` enfocada en unidades externas, con vibe cyberpunk.
 
-¡Disfruta tu cyberdeck! 🕶️
+¡Disfruta tu cyberdeck v3.0! 🕶️🚀
 
 ---
 

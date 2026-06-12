@@ -1,0 +1,15 @@
+C:\Users\ari\cyberpy_ari\CyberDeck\bin\Release\net10.0\CyberDeck.exe
+C:\Users\ari\cyberpy_ari\CyberDeck\bin\Release\net10.0\CyberDeck.deps.json
+C:\Users\ari\cyberpy_ari\CyberDeck\bin\Release\net10.0\CyberDeck.runtimeconfig.json
+C:\Users\ari\cyberpy_ari\CyberDeck\bin\Release\net10.0\CyberDeck.dll
+C:\Users\ari\cyberpy_ari\CyberDeck\bin\Release\net10.0\CyberDeck.pdb
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.AssemblyInfoInputs.cache
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.AssemblyInfo.cs
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.csproj.CoreCompileInputs.cache
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.sourcelink.json
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.dll
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\refint\CyberDeck.dll
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.pdb
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\CyberDeck.genruntimeconfig.cache
+C:\Users\ari\cyberpy_ari\CyberDeck\obj\Release\net10.0\ref\CyberDeck.dll
